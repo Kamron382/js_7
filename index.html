@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          font-size: 20px;
+          margin: 20px;
+        }
+        .row {
+          margin-bottom: 10px;
+        }
+      </style>
+    </head>
+    <body>
+    
+      <div class="row"><strong>Чётные:</strong> <span id="even"></span></div>
+      <div class="row"><strong>Нечётные:</strong> <span id="odd"></span></div>
+    
+      <script>
+        const evenSpan = document.getElementById('even');
+        const oddSpan = document.getElementById('odd');
+    
+        for (let i = 1; i <= 9; i++) {
+          const num = document.createElement('span');
+          num.textContent = i + ' ';
+          
+          if (i % 2 === 0) {
+            evenSpan.appendChild(num); // Чётное
+          } else {
+            oddSpan.appendChild(num); // Нечётное
+          }
+        }
+      </script>
+</body>
+</html>
